@@ -1,0 +1,31 @@
+.hero_top{
+    display: flex;
+    padding-inline: 100px;
+    gap: 20px;
+    justify-content: space-between;
+    background-color: rgb(236, 181, 30);
+}
+.hero_left{
+    max-width: 50%;
+    margin-top: 100px;
+}
+.hero_left h2{
+    font-size: 30px;
+}
+.hero_left h1{
+    font-size: 4.5rem;
+    margin-top: 10px;
+}
+.hero_left p{
+    font-size: 18px;
+    margin-top: 15px;
+    color: #ffffff;
+}
+.hero_right{
+    max-width: 50%;
+}
+.hero_right img{
+    width: 640px;
+    height: 500px;
+    object-fit: contain;
+}

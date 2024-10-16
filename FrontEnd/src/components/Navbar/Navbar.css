@@ -1,0 +1,41 @@
+.navbar{
+    padding: 30px;
+    padding-inline: 80px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    
+}
+.logo{
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.icon{
+    width: 35px;
+    height: 35px;
+}   
+.nav_cart_num{
+    background-color: #ff9914;
+    position: absolute;
+    right: -8px;
+    top:12px;
+    font-size: 12px;
+    height: 20px;
+    width: 20px;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav_icon_wrapper{
+    display: flex;
+}
+.nav_cart{
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
