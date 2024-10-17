@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import CartDetails from './CartDetails.jsx';
 import { ShopContext } from '../ShopContext/ShopContext.jsx';
 import "./Cart.css";
@@ -130,3 +130,4 @@ const Cart = () => {
 };
 
 export default Cart;
+

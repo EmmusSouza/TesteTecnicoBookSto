@@ -14,6 +14,6 @@ router.put('/:id', productController.updateProduct);
 // Rota para deletar produto
 router.delete('/:id', productController.deleteProduct);
 
-router.put('/:id/decrease', productController.decreaseProductStock);
+
 
 module.exports = router;

@@ -43,19 +43,4 @@ exports.deleteProduct = async (req, res) => {
         res.status(500).json({ message: 'Erro ao deletar o produto' });
     }
 };
-exports.decreaseProductStock = async (req, res) => {
-    try {
-      const { id } = req.params;
-      const product = await Product.findById(id);
-  
-      if (product && product.quantity > 0) {
-        product.quantity -= 1; // Decrementa a quantidade
-        await product.save(); // Salva as alterações no banco de dados
-        res.status(200).json(product);
-      } else {
-        res.status(400).json({ message: 'Estoque insuficiente' });
-      }
-    } catch (error) {
-      res.status(500).json({ message: 'Erro ao atualizar o estoque do produto' });
-    }
-  };
+

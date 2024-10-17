@@ -12,8 +12,6 @@ const Navbar = () => {
         <div className="logo">
         <h2>BookSto</h2>
         </div>
-        <div className="link">
-        </div>
         <div className="nav_icon_wrapper">
             <div className="nav_cart">
            <Link to ="/Cart">

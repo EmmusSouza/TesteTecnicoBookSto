@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useState } from 'react';
-
+import { createContext, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 export const ShopContext = createContext();
 
 const ShopContextProvider = ({ children }) => {
@@ -143,6 +143,11 @@ const ShopContextProvider = ({ children }) => {
         }),
       });
 
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Erro ao criar pedido');
+      }
+
       const data = await response.json();
       console.log('Pedido criado com sucesso:', data);
       setCart([]); // Limpar o carrinho após criar o pedido
@@ -183,4 +188,11 @@ const ShopContextProvider = ({ children }) => {
   );
 };
 
+// Validação de props
+ShopContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 export default ShopContextProvider;
+
+

@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react'; // Removendo a importação do React
 import PropTypes from 'prop-types';
 import { ShopContext } from '../ShopContext/ShopContext';
 import { IoMdRemove, IoMdAdd } from 'react-icons/io';
 import "./Cart.css";
 
 const CartDetails = ({ item }) => {
-  const {  increaseAmount, decreaseAmount } = useContext(ShopContext);
-  const { _id, name, imageUrl, price, amount, quantity } = item; // Usando _id no lugar de id
+  const { increaseAmount, decreaseAmount } = useContext(ShopContext);
+  const { _id, name, imageUrl, price, amount } = item; // Usando _id no lugar de id
 
   return (
     <div className="cart_item">
@@ -24,7 +24,7 @@ const CartDetails = ({ item }) => {
             <IoMdAdd />
           </button>
         </div>
-        <div className="price">        R$ {price}</div>
+        <div className="price">R$ {price}</div>
         <div className="total">
           {'R$ ' + parseFloat(price * amount).toFixed(2)}
         </div>

@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const OrderSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User', // Aqui você ainda pode manter a referência para o futuro, caso precise
-    required: false // Agora não é mais obrigatório
+    ref: 'User', // coloquei uma referencia para no futuro colocar a validacao de cliente pelo usuario
+    required: false 
   },
   items: [{
     product: {

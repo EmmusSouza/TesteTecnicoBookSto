@@ -1,5 +1,5 @@
 import Hero from '../../Components/Hero/Hero'
-import ProductList from '../../Components/ProductList/ProductList'
+import ProductList from '../../components/ProductList/ProductList'
 
 const Homepage = () => {
   return (
